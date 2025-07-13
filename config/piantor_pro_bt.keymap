@@ -159,5 +159,16 @@
             >;
         };
 
+
+        mouse_layer  {
+            display-name = "MOUSE";
+            bindings = <
+                &trans &kp LC(LS(O)) &kp LC(T)    &kp LC(LS(T))  &kp LA(HOME) &kp UP       &kp PG_UP    &msc SCRL_LEFT &mmv MOVE_UP    &msc SCRL_RIGHT  &kp K_VOL_UP &trans
+                &trans &kp LC(D)     &mkp LCLK    &mkp MCLK      &mkp  RCLK   &kp DOWN     &kp PG_DN    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp K_VOL_DN &trans
+                &trans &kp LC(LS(B)) &kp LC(N)    &kp LS(LC(N))  &kp LEFT     &kp RIGHT    &kp HOME     &msc SCRL_UP   &msc SCRL_DOWN  &kp END          &kp K_MUTE   &trans
+                                                  &trans         &trans       &trans       &trans       &trans         &trans       
+            >;
+        };
+
     };
 };
