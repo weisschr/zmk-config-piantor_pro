@@ -14,6 +14,12 @@
 };
 
 / {
+    chosen {
+        zmk,physical-layout = &default_layout;
+    };
+};
+
+/ {
     macros {
         control_panel: control_panel { 
             compatible = "zmk,behavior-macro";
@@ -110,8 +116,260 @@
 };
 
 / {
-    chosen {
-        zmk,physical-layout = &default_layout;
+    combos {
+        compatible = "zmk,combos";
+
+        // Characters
+		
+        combo_doublequ {
+            timeout-ms = <50>;
+            key-positions = <dk fk>;
+            bindings = <&kp DQT>;
+        };
+	combo_singlequ {
+            timeout-ms = <50>;
+            key-positions = <jk kk>;
+            bindings = <&kp SQT>;
+        };
+	combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <ck vk>;
+            bindings = <&kp LPAR>;
+        };
+	combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <mk commak>;
+            bindings = <&kp RPAR>;
+        };
+	combo_lbrace {
+            timeout-ms = <50>;
+            key-positions = <xk ck vk>;
+            bindings = <&kp LBKT>;
+        };
+	combo_rbrace {
+            timeout-ms = <50>;
+            key-positions = <mk commak periodk>;
+            bindings = <&kp RBKT>;
+        };
+	combo_lcurly {
+            timeout-ms = <50>;
+            key-positions = <xk vk>;
+            bindings = <&kp LBRC>;
+        };
+	combo_rcurly {
+            timeout-ms = <50>;
+            key-positions = <mk periodk>;
+            bindings = <&kp RBRC>;
+        };
+
+        // macro combos
+
+         combo_chrome {
+            timeout-ms = <50>;
+	    require-prior-idle-ms = <300>;
+            key-positions = <ck hk>;
+            bindings = <&launch_chrome>;
+        };
+
+        combo_mycomputer {
+            timeout-ms = <50>;
+	    require-prior-idle-ms = <300>;
+            key-positions = <ck yk>;
+            bindings = <&mycomputer>;
+        };
+
+        combo_cpanel {
+            timeout-ms = <50>;
+	    require-prior-idle-ms = <300>;
+            key-positions = <ck nk>;
+            bindings = <&control_panel>;
+        };
+
+        combo_vscode {
+            timeout-ms = <50>;
+	    require-prior-idle-ms = <300>;
+            key-positions = <ck uk>;
+            bindings = <&launch_vscode>;
+        };
+
+        combo_edge {
+            timeout-ms = <50>;
+	    require-prior-idle-ms = <300>;
+            key-positions = <ck jk>;
+            bindings = <&launch_edge>;
+        };
+        
+        combo_notepadpp {
+            timeout-ms = <50>;
+	    require-prior-idle-ms = <300>;
+            key-positions = <ck mk>;
+            bindings = <&launch_notepadpp>;
+        };
+
+        // Layer combos
+        
+        combo_alpha {
+            timeout-ms = <50>;
+            key-positions = <jk kk lk>;
+            bindings = <&to 0>;
+        };
+        combo_numbsym {
+            timeout-ms = <50>;
+            key-positions = <hk jk kk>;
+            bindings = <&tog 1>;
+        };
+        combo_numbsymosl {
+            timeout-ms = <50>;
+            key-positions = <hk kk>;
+            bindings = <&sl 1>;
+        };
+        combo_func {
+            timeout-ms = <50>;
+            key-positions = <nk mk commak>;
+            bindings = <&tog 2>;
+        };
+        combo_funcosl {
+            timeout-ms = <50>;
+            key-positions = <nk commak>;
+            bindings = <&sl 2>;
+        };
+        combo_apps {
+            timeout-ms = <50>;
+            key-positions = <yk uk ik>;
+            bindings = <&tog 3>;
+        };
+        combo_appsosl {
+            timeout-ms = <50>;
+            key-positions = <yk ik>;
+            bindings = <&sl 3>;
+        };
+
+	// activate number layer with shift when held.
+
+	comnbo_layermod_left {
+	    timeout-ms = <50>;
+            key-positions = <hk jk>;
+            bindings = <&lm 1 RSHIFT>;
+	};
+
+	// Behavioral
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <fk gk>;
+            bindings = <&kp ESC>;
+        };
+	
+	combo_winclose {
+            timeout-ms = <50>;
+ 	    require-prior-idle-ms = <250>;
+            key-positions = <rk tk>;
+            bindings = <&kp LC(F4)>;
+        };
+	
+	combo_appclose {
+            timeout-ms = <50>;
+ 	    require-prior-idle-ms = <250>;
+            key-positions = <vk bk>;
+            bindings = <&kp LA(F4)>;
+        };
+	combo_caplock {
+            timeout-ms = <50>;
+            key-positions = <zk xk ck>;
+            bindings = <&kp CAPS>;
+        };
+	combo_capsword {
+            timeout-ms = <50>;
+            key-positions = <ck bk>;
+            bindings = <&caps_word>;
+        };
+	combo_del {
+            timeout-ms = <50>;
+            key-positions = <dk gk>;
+            bindings = <&kp DEL>;
+        };
+	combo_leftarr {
+            timeout-ms = <100>;
+            key-positions = <dk fk gk>;
+            bindings = <&kp LEFT>;
+        };
+	combo_rightarr {
+            timeout-ms = <100>;
+            key-positions = <ek rk tk>;
+            bindings = <&kp RIGHT>;
+        };
+	combo_uparr {
+            timeout-ms = <100>;
+            key-positions = <wk ek rk>;
+            bindings = <&kp UP>;
+        };
+	combo_dnarr {
+            timeout-ms = <100>;
+            key-positions = <sk dk fk>;
+            bindings = <&kp DOWN>;
+        };
+	combo_pgup {
+            timeout-ms = <50>;
+            key-positions = <fk jk>;
+            bindings = <&kp PG_UP>;
+        };
+	combo_pgdn {
+            timeout-ms = <50>;
+            key-positions = <vk mk>;
+            bindings = <&kp PG_DN>;
+        };
+	combo_home {
+            timeout-ms = <50>;
+            key-positions = <gk hk>;
+            bindings = <&kp HOME>;
+        };
+	combo_end {
+            timeout-ms = <50>;
+            key-positions = <bk nk>;
+            bindings = <&kp END>;
+        };
+    	combo_teamsmute {
+            timeout-ms = <50>;
+            key-positions = <rk uk>;
+            bindings = <&kp LS(LC(M))>;
+        };
+    	combo_teamsvidtog {
+            timeout-ms = <50>;
+            key-positions = <tk yk>;
+            bindings = <&kp LS(LC(O))>;
+        };
+
+	// Boot key combos
+
+	combo_bootleft {
+            timeout-ms = <50>;
+            key-positions = <qk tk>;
+            bindings = <&bootloader>;
+        };
+
+	combo_bootright {
+            timeout-ms = <50>;
+            key-positions = <yk pk>;
+            bindings = <&bootloader>;
+        };
+
+	// Mouse combos
+
+	combo_left_click {
+            timeout-ms = <50>;
+            key-positions = <sk fk>;
+            bindings = <&mkp LCLK>;
+        };
+	combo_right_click {
+            timeout-ms = <50>;
+            key-positions = <wk rk>;
+            bindings = <&mkp  RCLK>;
+        };
+	combo_middle_click {
+            timeout-ms = <50>;
+            key-positions = <ek tk>;
+            bindings = <&mkp MCLK>;
+        }; 
     };
 };
 
@@ -156,17 +414,6 @@
                 &trans &bootloader &bt BT_SEL 1 &control_panel  &kp LG(E)              &kp LS(LC(LA(LG(W))))    &kp C_AL_CALC         &kp RC(RS(ESC)) &kp LS(LC(LA(LG(L)))) &bt BT_SEL 1 &bootloader &trans 
                 &trans &sys_reset  &bt BT_SEL 2 &kp LG(V)       &kp LS(LC(LA(LG(O))))  &kp LS(LC(LA(LG(X))))    &kp LS(LG(S))         &trans          &trans                &bt BT_SEL 2 &sys_reset  &trans 
                                    &trans       &trans          &trans                 &trans                   &trans                &trans       
-            >;
-        };
-
-
-        mouse_layer  {
-            display-name = "MOUSE";
-            bindings = <
-                &trans &kp LC(LS(O)) &kp LC(T)    &kp LC(LS(T))  &kp LA(HOME) &kp UP       &kp PG_UP    &msc SCRL_LEFT &mmv MOVE_UP    &msc SCRL_RIGHT  &kp K_VOL_UP &trans
-                &trans &kp LC(D)     &mkp LCLK    &mkp MCLK      &mkp  RCLK   &kp DOWN     &kp PG_DN    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp K_VOL_DN &trans
-                &trans &kp LC(LS(B)) &kp LC(N)    &kp LS(LC(N))  &kp LEFT     &kp RIGHT    &kp HOME     &msc SCRL_UP   &msc SCRL_DOWN  &kp END          &kp K_MUTE   &trans
-                                                  &trans         &trans       &trans       &trans       &trans         &trans       
             >;
         };
 
