@@ -149,5 +149,15 @@
             >;
         };
 
+        appcontrol_layer  {
+            display-name = "APPCONTROL";
+            bindings = <
+                &trans &bt BT_CLR  &bt BT_SEL 0 &kp LG(DOT)     &kp LG(R)              &kp LS(LC(LA(LG(T))))    &kp LS(LC(LA(LG(P)))) &kp C_BRI_UP    &kp C_BRI_DN          &bt BT_SEL 0 &bt BT_CLR  &trans 
+                &trans &bootloader &bt BT_SEL 1 &control_panel  &kp LG(E)              &kp LS(LC(LA(LG(W))))    &kp C_AL_CALC         &kp RC(RS(ESC)) &kp LS(LC(LA(LG(L)))) &bt BT_SEL 1 &bootloader &trans 
+                &trans &sys_reset  &bt BT_SEL 2 &kp LG(V)       &kp LS(LC(LA(LG(O))))  &kp LS(LC(LA(LG(X))))    &kp LS(LG(S))         &trans          &trans                &bt BT_SEL 2 &sys_reset  &trans 
+                                   &trans       &trans          &trans                 &trans                   &trans                &trans       
+            >;
+        };
+
     };
 };
