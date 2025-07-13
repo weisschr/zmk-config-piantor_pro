@@ -200,50 +200,6 @@
             bindings = <&kp RBRC>;
         };
 
-        // macro combos
-
-         combo_chrome {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <ck hk>;
-            bindings = <&launch_chrome>;
-        };
-
-        combo_mycomputer {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <ck yk>;
-            bindings = <&mycomputer>;
-        };
-
-        combo_cpanel {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <ck nk>;
-            bindings = <&control_panel>;
-        };
-
-        combo_vscode {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <ck uk>;
-            bindings = <&launch_vscode>;
-        };
-
-        combo_edge {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <ck jk>;
-            bindings = <&launch_edge>;
-        };
-        
-        combo_notepadpp {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <ck mk>;
-            bindings = <&launch_notepadpp>;
-        };
-
         // Layer combos
         
         combo_alpha {
@@ -287,14 +243,6 @@
             key-positions = <yk ik>;
             bindings = <&sl 3>;
         };
-
-	    // activate number layer with shift when held.
-
-	    comnbo_layermod_left {
-	        timeout-ms = <50>;
-            key-positions = <hk jk>;
-            bindings = <&lm 1 RSHIFT>;
-	    };
 
 	    // Behavioral
 
@@ -384,17 +332,6 @@
             bindings = <&kp END>;
         };
     	
-        combo_teamsmute {
-            timeout-ms = <50>;
-            key-positions = <rk uk>;
-            bindings = <&kp LS(LC(M))>;
-        };
-    	
-        combo_teamsvidtog {
-            timeout-ms = <50>;
-            key-positions = <tk yk>;
-            bindings = <&kp LS(LC(O))>;
-        };
 
 	// Boot key combos
 
