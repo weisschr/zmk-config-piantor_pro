@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&caps_word {
+    continue-list = <BACKSPACE DELETE>;
+};
+
 / {
     chosen {
         zmk,physical-layout = &default_layout;
