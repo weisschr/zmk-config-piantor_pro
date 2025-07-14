@@ -113,18 +113,6 @@
                 ;
         };
     	
-	launch_notepadpp: launch_notepadpp { 
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RGUI>
-                , <&macro_tap &kp R>
-		, <&macro_wait_time 80>
-                , <&macro_release &kp RGUI>
-                , <&macro_tap &kp N &kp O &kp T &kp E &kp P &kp A &kp D &kp PLUS &kp PLUS &kp ENTER>
-                ;
-        };
-    	
         // Layer with mod when held
 	
 	lm: lm {
