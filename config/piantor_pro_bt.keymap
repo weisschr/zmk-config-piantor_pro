@@ -154,7 +154,7 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-                 &sk LG(LS(LA(LCTRL)))  &kp Q  &kp W   &kp E     &kp R       &kp T   &kp Y     &kp U    &kp I     &kp O   &kp P    &sk LALT
+                &kp LG(LS(LA(LCTRL)))  &kp Q  &kp W   &kp E     &kp R       &kp T   &kp Y     &kp U    &kp I     &kp O   &kp P    &sk LALT
                 &sk LGUI               &kp A  &kp S   &kp D     &kp F       &kp G   &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp LCTRL
                 &sk LC(LA(LSHIFT))     &kp Z  &kp X   &kp C     &kp V       &kp B   &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp LSHIFT
                                               &kp TAB &kp LSHFT &kp SPACE   &kp RET &kp RSHFT &kp BSPC
