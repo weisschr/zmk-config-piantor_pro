@@ -86,12 +86,12 @@
         };
         combo_func {
             timeout-ms = <50>;
-            key-positions = <nk 31 32>;
+            key-positions = <30 31 32>;
             bindings = <&tog 2>;
         };
         combo_funcosl {
             timeout-ms = <50>;
-            key-positions = <nk 32>;
+            key-positions = <30 32>;
             bindings = <&sl 2>;
         };
         combo_apps {
@@ -184,7 +184,7 @@
         };
         combo_end {
             timeout-ms = <50>;
-            key-positions = <29 nk>;
+            key-positions = <29 30>;
             bindings = <&kp END>;
         };
        combo_teamsmute {
