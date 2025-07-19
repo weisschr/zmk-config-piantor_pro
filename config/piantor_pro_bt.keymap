@@ -47,10 +47,6 @@
     };
 };
 
-&caps_word {
-    continue-list = <BACKSPACE DELETE>;
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
