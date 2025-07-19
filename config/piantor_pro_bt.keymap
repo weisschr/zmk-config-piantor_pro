@@ -10,10 +10,45 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+#define	qk	    1
+#define	wk	    2
+#define	ek	    3
+#define	rk	    4
+#define	tk	    5
+#define	yk	    21
+#define	uk	    22
+#define	ik	    23
+#define	ok	    24
+#define	pk	    25
+#define	ak	    7
+#define	sk	    8
+#define	dk	    9
+#define	fk	    10
+#define	gk	    11
+#define	hk	    27
+#define	jk	    28
+#define	kk	    29
+#define	lk	    30
+#define	semik	31
+#define	zk	    13
+#define	xk	    14
+#define	ck	    15
+#define	vk	    16
+#define	bk	    17
+#define	nk	    33
+#define	mk	    34
+#define	commak	35
+#define	periodk	36
+#define	slashk	37
+
 / {
     chosen {
         zmk,physical-layout = &default_layout;
     };
+};
+
+&caps_word {
+    continue-list = <BACKSPACE DELETE>;
 };
 
 / {
