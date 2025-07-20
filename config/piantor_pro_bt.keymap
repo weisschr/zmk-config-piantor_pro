@@ -325,6 +325,59 @@
             key-positions = <3 5>;
             bindings = <&mkp MCLK>;
         }; 
+
+        // Macro combos
+
+        combo_chrome {
+            timeout-ms = <50>;
+	        require-prior-idle-ms = <300>;
+            key-positions = <27 18>;
+            bindings = <&launch_chrome>;
+        };
+
+        combo_mycomputer {
+            timeout-ms = <50>;
+	        require-prior-idle-ms = <300>;
+            key-positions = <27 6>;
+            bindings = <&mycomputer>;
+        };
+
+        combo_cpanel {
+            timeout-ms = <50>;
+	        require-prior-idle-ms = <300>;
+            key-positions = <27 30>;
+            bindings = <&control_panel>;
+        };
+
+        combo_vscode {
+            timeout-ms = <50>;
+	        require-prior-idle-ms = <300>;
+            key-positions = <27 7>;
+            bindings = <&launch_vscode>;
+        };
+
+        combo_edge {
+            timeout-ms = <50>;
+	        require-prior-idle-ms = <300>;
+            key-positions = <27 19>;
+            bindings = <&launch_edge>;
+        };
+        
+        combo_notepadpp {
+            timeout-ms = <50>;
+	        require-prior-idle-ms = <300>;
+            key-positions = <27 31>;
+            bindings = <&launch_notepadpp>;
+        };
+
+        // activate number layer with shift when held.
+
+	    comnbo_layermod_left {
+	        timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&lm 1 RSHIFT>;
+	    };
+
     };
 };
 
@@ -380,15 +433,15 @@
         appcontrol_layer {
             display-name = "APPCONTROL_LAYER";
             // --------------------------------------------------------------------------------------------------
-            // | SK HYPER | BTCLR | BT0 | EMOJI | RUN   | TEAMS | PWRPT | BRIUP | BRDN  | BT0 | BTCLR | SK ALT   |
-            // | SK LGUI  | BOOT  | BT1 | D     | FILX  | WORD  | CALC  | TASK  | LNKIN | BT1 | BOOT  | SK CTRL  |
-            // | SK MEH   | RESET | BT2 | CLIPB | OUTLK | EXCEL | SNIP  |  M    |  ,    | BT2 | RESET | SK SHIFT |
-            //                          | TAB   | SHFT  | SPC   | ENT    | SHFT | BCKSP |
+            // | SK HYPER | BTCLR | BT0 | EMOJI  | RUN   | TEAMS | PWRPT | BRIUP | BRDN  | BT0 | BTCLR | SK ALT   |
+            // | SK LGUI  | BOOT  | BT1 | CTRLPN | FILX  | WORD  | CALC  | TASK  | LNKIN | BT1 | BOOT  | SK CTRL  |
+            // | SK MEH   | RESET | BT2 | CLIPB  | OUTLK | EXCEL | SNIP  |  M    | MYCMP | BT2 | RESET | SK SHIFT |
+            //                          | TAB    | SHFT  | SPC   | ENT    | SHFT | BCKSP |
             bindings = <
-                &trans &bt BT_CLR  &bt BT_SEL 0 &kp LG(DOT) &kp LG(R)             &kp LS(LC(LA(LG(T)))) &kp LS(LC(LA(LG(P)))) &kp C_BRI_UP    &kp C_BRI_DN          &bt BT_SEL 0 &bt BT_CLR  &trans
-                &trans &bootloader &bt BT_SEL 1 &trans      &kp LG(E)             &kp LS(LC(LA(LG(W)))) &kp C_AL_CALC         &kp RC(RS(ESC)) &kp LS(LC(LA(LG(L)))) &bt BT_SEL 1 &bootloader &trans
-                &trans &sys_reset  &bt BT_SEL 2 &kp LG(V)   &kp LS(LC(LA(LG(O)))) &kp LS(LC(LA(LG(X)))) &kp LS(LG(S))         &trans          &trans                &bt BT_SEL 2 &sys_reset  &trans
-                                                &trans      &trans                &trans                &trans                &trans          &trans       
+                &trans &bt BT_CLR  &bt BT_SEL 0 &kp LG(DOT)    &kp LG(R)             &kp LS(LC(LA(LG(T)))) &kp LS(LC(LA(LG(P)))) &kp C_BRI_UP    &kp C_BRI_DN          &bt BT_SEL 0 &bt BT_CLR  &trans
+                &trans &bootloader &bt BT_SEL 1 &control_panel &kp LG(E)             &kp LS(LC(LA(LG(W)))) &kp C_AL_CALC         &kp RC(RS(ESC)) &kp LS(LC(LA(LG(L)))) &bt BT_SEL 1 &bootloader &trans
+                &trans &sys_reset  &bt BT_SEL 2 &kp LG(V)      &kp LS(LC(LA(LG(O)))) &kp LS(LC(LA(LG(X)))) &kp LS(LG(S))         &trans          &mycomputer           &bt BT_SEL 2 &sys_reset  &trans
+                                                &trans         &trans                &trans                &trans                &trans          &trans       
             >;
         };
 
