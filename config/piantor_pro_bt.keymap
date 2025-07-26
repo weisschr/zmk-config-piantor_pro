@@ -22,7 +22,7 @@
 
 / {
     behaviors {
-        td_shift: tap_dance_0 {
+        shift_layer: shift_layer {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_LAYER";
             #binding-cells = <0>;
