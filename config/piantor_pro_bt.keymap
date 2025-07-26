@@ -22,19 +22,42 @@
 
 / {
     behaviors {
-        shift_layer: shift_layer {
-            compatible = "zmk,behavior-tap-dance";
+         &sk_lctl {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_LCTL";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk RSHIFT>, <&tog 1>;
+            sticky-key.behavior = <&kp LC(LCTL)>;
         };
-        shift_layer_hold: shift_layer_hold {
-            compatible = "zmk,behavior-hold-tap";
+
+        // Toggle to Layer 1
+        &ltoggle_layer_1 {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLE_LAYER_1";
             #binding-cells = <0>;
-            flavor = "tap-preferred";
+            layer = <1>;
+        };
+
+        // Momentary Layer 1
+        &mo_layer_1 {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "MO_LAYER_1";
+            #binding-cells = <0>;
+            layer = <1>;
+        };
+        td_ctrl_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CTRL_TOGGLE";
+            #binding-cells = <0>;
+            bindings = <&sk_lctl &ltoggle_layer_1>;
+            tap-count = <2>;
+        };
+        ht_layer_tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_L1_TD";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&mo 1>, <&shift_layer>;
+            bindings = <&mo_layer_1 &td_ctrl_toggle>;
         };
     };
   };
@@ -414,7 +437,7 @@
             bindings = <
                 &sk LG(LS(LA(LCTRL))) &kp Q &kp W  &kp E   &kp R       &kp T           &kp Y           &kp U       &kp I     &kp O   &kp P    &sk RALT
                 &sk LGUI              &kp A &kp S  &kp D   &mt LCTRL F &mt LS(LCTRL) G &mt RS(RCTRL) H &mt RCTRL J &kp K     &kp L   &kp SEMI &sk RCTRL
-                &sk LS(LA(LCTRL))     &kp Z &kp X  &kp C   &kp V       &kp B           &kp N           &kp M       &kp COMMA &kp DOT &kp FSLH &shift_layer_hold
+                &sk LS(LA(LCTRL))     &kp Z &kp X  &kp C   &kp V       &kp B           &kp N           &kp M       &kp COMMA &kp DOT &kp FSLH &ht_layer_tapdance
                                                    &kp TAB &kp LSHFT   &kp SPACE       &kp RET         &kp RSHIFT  &kp BSPC
             >;
         };
