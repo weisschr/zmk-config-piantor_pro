@@ -22,7 +22,7 @@
 
 / {
     behaviors {
-         &sk_lctl {
+         sk_lctl:sk_lctl {
             compatible = "zmk,behavior-sticky-key";
             label = "SK_LCTL";
             #binding-cells = <0>;
@@ -30,7 +30,7 @@
         };
 
         // Toggle to Layer 1
-        &ltoggle_layer_1 {
+        ltoggle_layer_1:ltoggle_layer_1 {
             compatible = "zmk,behavior-toggle-layer";
             label = "TOGGLE_LAYER_1";
             #binding-cells = <0>;
@@ -38,20 +38,20 @@
         };
 
         // Momentary Layer 1
-        &mo_layer_1 {
+        mo_layer_1:mo_layer_1 {
             compatible = "zmk,behavior-momentary-layer";
             label = "MO_LAYER_1";
             #binding-cells = <0>;
             layer = <1>;
         };
-        td_ctrl_toggle {
+        td_ctrl_toggle:td_ctrl_toggle {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CTRL_TOGGLE";
             #binding-cells = <0>;
             bindings = <&sk_lctl &ltoggle_layer_1>;
             tap-count = <2>;
         };
-        ht_layer_tapdance {
+        ht_layer_tapdance:ht_layer_tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_L1_TD";
             #binding-cells = <0>;
