@@ -21,6 +21,27 @@
 };
 
 / {
+    behaviors {
+        td_shift: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_LAYER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk RSHIFT>, <&tog 1>;
+        };
+        shift_layer_hold: shift_layer_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_LAYER_HOLD";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo 1>, <&shift_layer>;
+        };
+    };
+  }
+
+/ {
     macros {
         control_panel: control_panel { 
             compatible = "zmk,behavior-macro";
@@ -395,7 +416,7 @@
             bindings = <
                 &sk LG(LS(LA(LCTRL))) &kp Q &kp W  &kp E   &kp R       &kp T           &kp Y           &kp U       &kp I     &kp O   &kp P    &sk RALT
                 &sk LGUI              &kp A &kp S  &kp D   &mt LCTRL F &mt LS(LCTRL) G &mt RS(RCTRL) H &mt RCTRL J &kp K     &kp L   &kp SEMI &sk RCTRL
-                &sk LS(LA(LCTRL))     &kp Z &kp X  &kp C   &kp V       &kp B           &kp N           &kp M       &kp COMMA &kp DOT &kp FSLH &sk RSHIFT
+                &sk LS(LA(LCTRL))     &kp Z &kp X  &kp C   &kp V       &kp B           &kp N           &kp M       &kp COMMA &kp DOT &kp FSLH &shift_layer_hold
                                                    &kp TAB &kp LSHFT   &kp SPACE       &kp RET         &kp RSHIFT  &kp BSPC
             >;
         };
