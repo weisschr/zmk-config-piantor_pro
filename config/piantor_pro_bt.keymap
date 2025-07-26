@@ -39,7 +39,7 @@
             bindings = <&mo 1>, <&shift_layer>;
         };
     };
-  }
+  };
 
 / {
     macros {
