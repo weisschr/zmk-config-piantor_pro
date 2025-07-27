@@ -14,6 +14,14 @@
 
 #define qk 1
 #define wk 2
+#define ek 3
+#define rk 4
+#define tk 5
+#define yk 6
+#define uk 7
+#define ik 8
+#define ok 9
+#define pk 10
 
 / {
     chosen {
