@@ -274,43 +274,43 @@
         combo_alpha {
             timeout-ms = <50>;
             key-positions = <jkey kkey lkey>;
-            bindings = <&to LAYER_ALPHA>;
+            bindings = <&to 0>;
         };
         combo_numbsym {
             timeout-ms = <50>;
             key-positions = <hkey jkey kkey>;
-            bindings = <&tog LAYER_NUMBSYM>;
+            bindings = <&tog 1>;
         };
         combo_numbsymosl {
             timeout-ms = <50>;
             key-positions = <hkey kkey>;
-            bindings = <&sl LAYER_NUMBSYM>;
+            bindings = <&sl 1>;
         };
         combo_func {
             timeout-ms = <50>;
             key-positions = <nkey mkey commakey>;
-            bindings = <&tog LAYER_FUNCTION>;
+            bindings = <&tog 2>;
         };
         combo_funcosl {
             timeout-ms = <50>;
             key-positions = <nkey commakey>;
-            bindings = <&sl LAYER_FUNCTION>;
+            bindings = <&sl 2>;
         };
         combo_apps {
             timeout-ms = <50>;
             key-positions = <ykey ukey ikey>;
-            bindings = <&tog LAYER_APPCONTROL>;
+            bindings = <&tog 3>;
         };
         combo_appsosl {
             timeout-ms = <50>;
             key-positions = <ykey ikey>;
-            bindings = <&sl LAYER_APPCONTROL>;
+            bindings = <&sl 3>;
         };
 
         combo_mouse {
             timeout-ms = <50>;
             key-positions = <wkey ekey rkey tkey>;
-            bindings = <&tog LAYER_MOUSE>;
+            bindings = <&tog 4>;
         };
         
         // activate number layer with shift when held.
@@ -318,7 +318,7 @@
         comnbo_layermod_left {
             timeout-ms = <50>;
             key-positions = <hkey jkey>;
-            bindings = <&lm LAYER_NUMBSYM RSHIFT>;
+            bindings = <&lm 1 RSHIFT>;
         };
 
         // Behavioral
