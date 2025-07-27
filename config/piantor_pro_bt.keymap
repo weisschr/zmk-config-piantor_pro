@@ -71,13 +71,53 @@
           *     - 1×  → delegates to the hold‑tap above
           *     - 2×  → toggles Layer1
           */
-         td_shift_layer: tap_dance {
+         td_shift_layer: tap_dance_1 {
              compatible        = "zmk,behavior-tap-dance";
              label             = "TD_SHIFT_LAYER";
              #binding-cells    = <0>;
              tapping-term-ms   = <200>;
-             bindings          = < &mo_sk 1 LSHIFT >,   /* 1 tap / hold */
+             bindings          = < &mo_sk 1 RSHIFT >,   /* 1 tap / hold */
                                  < &tog 1 >;            /* 2 taps       */
+         };
+         td_ctrl_layer: tap_dance_2 {
+             compatible        = "zmk,behavior-tap-dance";
+             label             = "TD_CTRL_LAYER";
+             #binding-cells    = <0>;
+             tapping-term-ms   = <200>;
+             bindings          = < &mo_sk 2 RCTRL >,   /* 1 tap / hold */
+                                 < &tog 2 >;            /* 2 taps       */
+         };
+         td_alt_layer: tap_dance_3 {
+             compatible        = "zmk,behavior-tap-dance";
+             label             = "TD_ALT_LAYER";
+             #binding-cells    = <0>;
+             tapping-term-ms   = <200>;
+             bindings          = < &mo_sk 3 RALT >,   /* 1 tap / hold */
+                                 < &tog 3 >;            /* 2 taps       */
+         };
+         td_meh_layer: tap_dance_4 {
+             compatible        = "zmk,behavior-tap-dance";
+             label             = "TD_MEH_LAYER";
+             #binding-cells    = <0>;
+             tapping-term-ms   = <200>;
+             bindings          = < &mo_sk 1 LS(LA(LCTRL)) >,   /* 1 tap / hold */
+                                 < &tog 1 >;            /* 2 taps       */
+         };
+         td_gui_layer: tap_dance_5 {
+             compatible        = "zmk,behavior-tap-dance";
+             label             = "TD_GUI_LAYER";
+             #binding-cells    = <0>;
+             tapping-term-ms   = <200>;
+             bindings          = < &mo_sk 2 LGUI >,   /* 1 tap / hold */
+                                 < &tog 2 >;            /* 2 taps       */
+         };
+         td_hyper_layer: tap_dance_6 {
+             compatible        = "zmk,behavior-tap-dance";
+             label             = "TD_HYPER_LAYER";
+             #binding-cells    = <0>;
+             tapping-term-ms   = <200>;
+             bindings          = < &mo_sk 3 LG(LS(LA(LCTRL))) >,   /* 1 tap / hold */
+                                 < &tog 3 >;            /* 2 taps       */
          };
      };
  };
@@ -455,10 +495,10 @@
             // | SK MEH   |  Z  |  X  |  C  |  V   |  B  |  N  |  M    |  ,  |  .  |  /  | SK SHIFT |
             //                        | TAB | SHFT | SPC | ENT | SHIFT | BSP |
             bindings = <
-                &sk LG(LS(LA(LCTRL))) &kp Q &kp W  &kp E   &kp R       &kp T           &kp Y           &kp U       &kp I     &kp O   &kp P    &sk RALT
-                &sk LGUI              &kp A &kp S  &kp D   &mt LCTRL F &mt LS(LCTRL) G &mt RS(RCTRL) H &mt RCTRL J &kp K     &kp L   &kp SEMI &sk RCTRL
-                &sk LS(LA(LCTRL))     &kp Z &kp X  &kp C   &kp V       &kp B           &kp N           &kp M       &kp COMMA &kp DOT &kp FSLH &td_shift_layer
-                                                   &kp TAB &kp LSHFT   &kp SPACE       &kp RET         &kp RSHIFT  &kp BSPC
+                &td_hyper_layer &kp Q &kp W  &kp E   &kp R       &kp T           &kp Y           &kp U       &kp I     &kp O   &kp P    &td_alt_layer
+                &td_gui_layer   &kp A &kp S  &kp D   &mt LCTRL F &mt LS(LCTRL) G &mt RS(RCTRL) H &mt RCTRL J &kp K     &kp L   &kp SEMI &td_ctrl_layer
+                &td_meh_layer   &kp Z &kp X  &kp C   &kp V       &kp B           &kp N           &kp M       &kp COMMA &kp DOT &kp FSLH &td_shift_layer
+                                             &kp TAB &kp LSHFT   &kp SPACE       &kp RET         &kp RSHIFT  &kp BSPC
             >;
         };
 
