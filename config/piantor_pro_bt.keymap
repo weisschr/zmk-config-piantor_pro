@@ -12,16 +12,36 @@
 
 // Simplification for combo references
 
-#define qk 1
-#define wk 2
-#define ek 3
-#define rk 4
-#define tk 5
-#define yk 6
-#define uk 7
-#define ik 8
-#define ok 9
-#define pk 10
+#define qkey 1
+#define wkey 2
+#define ekey 3
+#define rkey 4
+#define tkey 5
+#define ykey 6
+#define ukey 7
+#define ikey 8
+#define okey 9
+#define pkey 10
+#define akey 12
+#define skey 13
+#define dkey 14
+#define fkey 15
+#define gkey 16
+#define hkey 17
+#define jkey 18
+#define kkey 19
+#define lkey 20
+#define semikey 21
+#define zkey 25
+#define xkey 26
+#define ckey 27
+#define vkey 28
+#define bkey 29
+#define nkey 30
+#define mkey 31
+#define commakey 32
+#define periodkey 33
+#define slashkey 34
 
 / {
     chosen {
