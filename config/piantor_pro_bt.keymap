@@ -30,8 +30,8 @@
 #define	hk	    17
 #define	jk	    18
 #define	kk	    19
-#define	lk	    20 
-#define	semik	21
+#define	lk	    20
+#define	semik   21
 #define	zk	    25
 #define	xk	    26
 #define	ck	    27
@@ -39,9 +39,9 @@
 #define	bk	    29
 #define	nk	    30
 #define	mk	    31
-#define	commak	32
-#define	periodk	33
-#define	slashk	34
+#define	commak  32
+#define	periodk 33
+#define	slashk  34
 
 / {
     chosen {
@@ -52,7 +52,6 @@
 &caps_word {
     continue-list = <BACKSPACE DELETE>;
 };
-
 
  / {
      behaviors {
