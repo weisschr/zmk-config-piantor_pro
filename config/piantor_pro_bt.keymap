@@ -10,7 +10,38 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-#define testv 1 
+// Simplification for combo references
+
+#define	qk	    1
+#define	wk	    2
+#define	ek	    3
+#define	rk	    4
+#define	tk	    5
+#define	yk	    6
+#define	uk	    7
+#define	ik	    8
+#define	ok	    9
+#define	pk	    10
+#define	ak	    12
+#define	sk	    13
+#define	dk	    14
+#define	fk	    15
+#define	gk	    16
+#define	hk	    17
+#define	jk	    18
+#define	kk	    19
+#define	lk	    20 
+#define	semik	21
+#define	zk	    25
+#define	xk	    26
+#define	ck	    27
+#define	vk	    28
+#define	bk	    29
+#define	nk	    30
+#define	mk	    31
+#define	commak	32
+#define	periodk	33
+#define	slashk	34
 
 / {
     chosen {
