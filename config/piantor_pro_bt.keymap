@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+#define testv 1 
+
 / {
     chosen {
         zmk,physical-layout = &default_layout;
