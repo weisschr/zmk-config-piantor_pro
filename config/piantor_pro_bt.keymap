@@ -186,186 +186,239 @@
       
         combo_doublequ {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <dkey fkey>;
             bindings = <&kp DQT>;
         };
         combo_singlequ {
             timeout-ms = <50>;
-            key-positions = <19 20>;
+            key-positions = <jkey kkey>;
             bindings = <&kp SQT>;
         };
         combo_lpar {
             timeout-ms = <50>;
-            key-positions = <27 28>;
+            key-positions = <ckey vkey>;
             bindings = <&kp LPAR>;
         };
         combo_rpar {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <mkey commakey>;
             bindings = <&kp RPAR>;
         };
         combo_lbrace {
             timeout-ms = <50>;
-            key-positions = <26 27 28>;
+            key-positions = <xkey ckey vkey>;
             bindings = <&kp LBKT>;
         };
         combo_rbrace {
             timeout-ms = <50>;
-            key-positions = <31 32 33>;
+            key-positions = <mkey commakey periodkey>;
             bindings = <&kp RBKT>;
         };
         combo_lcurly {
             timeout-ms = <50>;
-            key-positions = <26 28>;
+            key-positions = <xkey vkey>;
             bindings = <&kp LBRC>;
         };
         combo_rcurly {
             timeout-ms = <50>;
-            key-positions = <31 33>;
+            key-positions = <mkey periodkey>;
             bindings = <&kp RBRC>;
+        };
+
+        // macro combos
+
+        combo_chrome {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
+            key-positions = <ckey hkey>;
+            bindings = <&launch_chrome>;
+        };
+
+        combo_mycomputer {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
+            key-positions = <ckey ykey>;
+            bindings = <&mycomputer>;
+        };
+
+        combo_cpanel {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
+            key-positions = <ckey nkey>;
+            bindings = <&control_panel>;
+        };
+
+        combo_vscode {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
+            key-positions = <ckey ukey>;
+            bindings = <&launch_vscode>;
+        };
+
+        combo_edge {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
+            key-positions = <ckey jkey>;
+            bindings = <&launch_edge>;
+        };
+        
+        combo_notepadpp {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
+            key-positions = <ckey mkey>;
+            bindings = <&launch_notepadpp>;
         };
 
         // Layer combos
         
         combo_alpha {
             timeout-ms = <50>;
-            key-positions = <19 20 21>;
-            bindings = <&to 0>;
+            key-positions = <jkey kkey lkey>;
+            bindings = <&to LAYER_ALPHA>;
         };
         combo_numbsym {
             timeout-ms = <50>;
-            key-positions = <18 19 20>;
-            bindings = <&tog 1>;
+            key-positions = <hkey jkey kkey>;
+            bindings = <&tog LAYER_NUMBSYM>;
         };
         combo_numbsymosl {
             timeout-ms = <50>;
-            key-positions = <18 20>;
-            bindings = <&sl 1>;
+            key-positions = <hkey kkey>;
+            bindings = <&sl LAYER_NUMBSYM>;
         };
         combo_func {
             timeout-ms = <50>;
-            key-positions = <30 31 32>;
-            bindings = <&tog 2>;
+            key-positions = <nkey mkey commakey>;
+            bindings = <&tog LAYER_FUNCTION>;
         };
         combo_funcosl {
             timeout-ms = <50>;
-            key-positions = <30 32>;
-            bindings = <&sl 2>;
+            key-positions = <nkey commakey>;
+            bindings = <&sl LAYER_FUNCTION>;
         };
         combo_apps {
             timeout-ms = <50>;
-            key-positions = <6 7 8>;
-            bindings = <&tog 3>;
+            key-positions = <ykey ukey ikey>;
+            bindings = <&tog LAYER_APPCONTROL>;
         };
         combo_appsosl {
             timeout-ms = <50>;
-            key-positions = <6 8>;
-            bindings = <&sl 3>;
+            key-positions = <ykey ikey>;
+            bindings = <&sl LAYER_APPCONTROL>;
         };
 
         combo_mouse {
             timeout-ms = <50>;
-            key-positions = <2 3 4 5>;
-            bindings = <&tog 4>;
+            key-positions = <wkey ekey rkey tkey>;
+            bindings = <&tog LAYER_MOUSE>;
         };
         
-   // Behavioral
+        // activate number layer with shift when held.
+
+        comnbo_layermod_left {
+            timeout-ms = <50>;
+            key-positions = <hkey jkey>;
+            bindings = <&lm LAYER_NUMBSYM RSHIFT>;
+        };
+
+        // Behavioral
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <fkey gkey>;
             bindings = <&kp ESC>;
         };
    
         combo_winclose {
             timeout-ms = <50>;
-            require-prior-idle-ms = <350>;
-            key-positions = <4 5>;
+            require-prior-idle-ms = <500>;
+            key-positions = <rkey tkey>;
             bindings = <&kp LC(F4)>;
         };
    
         combo_appclose {
             timeout-ms = <50>;
-            require-prior-idle-ms = <350>;
-            key-positions = <28 29>;
+            require-prior-idle-ms = <500>;
+            key-positions = <vkey bkey>;
             bindings = <&kp LA(F4)>;
         };
         combo_caplock {
             timeout-ms = <50>;
-            key-positions = <25 26 27>;
+            key-positions = <zkey xkey ckey>;
             bindings = <&kp CAPS>;
         };
         combo_capsword {
             timeout-ms = <50>;
-            key-positions = <27 29>;
+            key-positions = <ckey bkey>;
             bindings = <&caps_word>;
         };
         combo_del {
             timeout-ms = <50>;
-            key-positions = <15 17>;
+            key-positions = <dkey gkey>;
             bindings = <&kp DEL>;
         };
         combo_leftarr {
             timeout-ms = <100>;
-            key-positions = <15 16 17>;
+            key-positions = <dkey fkey gkey>;
             bindings = <&kp LEFT>;
         };
         combo_rightarr {
             timeout-ms = <100>;
-            key-positions = <3 4 5>;
+            key-positions = <ekey rkey tkey>;
             bindings = <&kp RIGHT>;
         };
         combo_uparr {
             timeout-ms = <100>;
-            key-positions = <2 3 4>;
+            key-positions = <wkey ekey rkey>;
             bindings = <&kp UP>;
         };
         combo_dnarr {
             timeout-ms = <100>;
-            key-positions = <14 15 16>;
+            key-positions = <skey dkey fkey>;
             bindings = <&kp DOWN>;
         };
         combo_pgup {
             timeout-ms = <50>;
-            key-positions = <16 19>;
+            key-positions = <fkey jkey>;
             bindings = <&kp PG_UP>;
         };
         combo_pgdn {
             timeout-ms = <50>;
-            key-positions = <28 31>;
+            key-positions = <vkey mkey>;
             bindings = <&kp PG_DN>;
         };
         combo_home {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <gkey hkey>;
             bindings = <&kp HOME>;
         };
         combo_end {
             timeout-ms = <50>;
-            key-positions = <29 30>;
+            key-positions = <bkey nkey>;
             bindings = <&kp END>;
         };
-       combo_teamsmute {
+        combo_teamsmute {
             timeout-ms = <50>;
-            key-positions = <4 7>;
+            key-positions = <rkey ukey>;
             bindings = <&kp LS(LC(M))>;
         };
-       combo_teamsvidtog {
+        combo_teamsvidtog {
             timeout-ms = <50>;
-            key-positions = <5 6>;
+            key-positions = <tkey ykey>;
             bindings = <&kp LS(LC(O))>;
         };
-        // Boot key combos
+        
+		// Boot key combos
 
         combo_bootleft {
             timeout-ms = <50>;
-            key-positions = <1 5>;
+            key-positions = <qkey tkey>;
             bindings = <&bootloader>;
         };
 
         combo_bootright {
             timeout-ms = <50>;
-            key-positions = <6 10>;
+            key-positions = <ykey pkey>;
             bindings = <&bootloader>;
         };
 
@@ -373,72 +426,19 @@
 
         combo_left_click {
             timeout-ms = <50>;
-            key-positions = <14 16>;
+            key-positions = <skey fkey>;
             bindings = <&mkp LCLK>;
         };
         combo_right_click {
             timeout-ms = <50>;
-            key-positions = <2 4>;
+            key-positions = <wkey rkey>;
             bindings = <&mkp  RCLK>;
         };
         combo_middle_click {
             timeout-ms = <50>;
-            key-positions = <3 5>;
+            key-positions = <ekey tkey>;
             bindings = <&mkp MCLK>;
         }; 
-
-        // Macro combos
-
-        combo_chrome {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <27 18>;
-            bindings = <&launch_chrome>;
-        };
-
-        combo_mycomputer {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <27 6>;
-            bindings = <&mycomputer>;
-        };
-
-        combo_cpanel {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <27 30>;
-            bindings = <&control_panel>;
-        };
-
-        combo_vscode {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <27 7>;
-            bindings = <&launch_vscode>;
-        };
-
-        combo_edge {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <27 19>;
-            bindings = <&launch_edge>;
-        };
-        
-        combo_notepadpp {
-            timeout-ms = <50>;
-	        require-prior-idle-ms = <300>;
-            key-positions = <27 31>;
-            bindings = <&launch_notepadpp>;
-        };
-
-        // activate number layer with shift when held.
-
-	    comnbo_layermod_left {
-	        timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&lm 1 RSHIFT>;
-	    };
-
     };
 };
 
