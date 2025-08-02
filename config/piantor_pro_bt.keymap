@@ -268,42 +268,42 @@
 
         combo_chrome {
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <1300>;
             key-positions = <ckey hkey>;
             bindings = <&launch_chrome>;
         };
 
         combo_mycomputer {
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <1300>;
             key-positions = <ckey ykey>;
             bindings = <&mycomputer>;
         };
 
         combo_cpanel {
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <1300>;
             key-positions = <ckey nkey>;
             bindings = <&control_panel>;
         };
 
         combo_vscode {
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <1300>;
             key-positions = <ckey ukey>;
             bindings = <&launch_vscode>;
         };
 
         combo_edge {
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <1300>;
             key-positions = <ckey jkey>;
             bindings = <&launch_edge>;
         };
         
         combo_notepadpp {
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <1300>;
             key-positions = <ckey mkey>;
             bindings = <&launch_notepadpp>;
         };
