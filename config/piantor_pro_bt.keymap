@@ -303,7 +303,7 @@
         
         combo_notepadpp {
             timeout-ms = <50>;
-            require-prior-idle-ms = <1300>;
+            require-prior-idle-ms = <1200>;
             key-positions = <ckey mkey>;
             bindings = <&launch_notepadpp>;
         };
