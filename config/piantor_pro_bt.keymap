@@ -224,42 +224,50 @@
         // Characters
       
         combo_doublequ {
-            timeout-ms = <50>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <100>;
             key-positions = <dkey fkey>;
             bindings = <&kp DQT>;
         };
         combo_singlequ {
-            timeout-ms = <50>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <100>;
             key-positions = <jkey kkey>;
             bindings = <&kp SQT>;
         };
         combo_lpar {
-            timeout-ms = <50>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <100>;
             key-positions = <ckey vkey>;
             bindings = <&kp LPAR>;
         };
         combo_rpar {
-            timeout-ms = <50>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <100>;
             key-positions = <mkey commakey>;
             bindings = <&kp RPAR>;
         };
         combo_lbrace {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <xkey ckey vkey>;
             bindings = <&kp LBKT>;
         };
         combo_rbrace {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <mkey commakey periodkey>;
             bindings = <&kp RBKT>;
         };
         combo_lcurly {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <xkey vkey>;
             bindings = <&kp LBRC>;
         };
         combo_rcurly {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <mkey periodkey>;
             bindings = <&kp RBRC>;
         };
@@ -267,42 +275,42 @@
         // macro combos
 
         combo_chrome {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <1300>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <1200>;
             key-positions = <ckey hkey>;
             bindings = <&launch_chrome>;
         };
 
         combo_mycomputer {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <1300>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <1200>;
             key-positions = <ckey ykey>;
             bindings = <&mycomputer>;
         };
 
         combo_cpanel {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <1300>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <1200>;
             key-positions = <ckey nkey>;
             bindings = <&control_panel>;
         };
 
         combo_vscode {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <1300>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <1200>;
             key-positions = <ckey ukey>;
             bindings = <&launch_vscode>;
         };
 
         combo_edge {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <1300>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <1200>;
             key-positions = <ckey jkey>;
             bindings = <&launch_edge>;
         };
         
         combo_notepadpp {
-            timeout-ms = <50>;
+            timeout-ms = <10>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey mkey>;
             bindings = <&launch_notepadpp>;
@@ -312,42 +320,50 @@
         
         combo_alpha {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <jkey kkey lkey>;
             bindings = <&to 0>;
         };
         combo_numbsym {
             timeout-ms = <50>;
+            require-prior-idle-ms = <1000>;
             key-positions = <hkey jkey kkey>;
             bindings = <&tog 1>;
         };
         combo_numbsymosl {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <hkey kkey>;
             bindings = <&sl 1>;
         };
         combo_func {
             timeout-ms = <50>;
+            require-prior-idle-ms = <1000>;
             key-positions = <nkey mkey commakey>;
             bindings = <&tog 2>;
         };
         combo_funcosl {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <nkey commakey>;
             bindings = <&sl 2>;
         };
-        combo_apps {
+        combo_app {
             timeout-ms = <50>;
+            require-prior-idle-ms = <1000>;
             key-positions = <ykey ukey ikey>;
             bindings = <&tog 3>;
         };
-        combo_appsosl {
+        combo_apposl {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <ykey ikey>;
             bindings = <&sl 3>;
         };
 
         combo_mouse {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <100>;
             key-positions = <wkey ekey rkey tkey>;
             bindings = <&tog 4>;
         };
@@ -356,6 +372,7 @@
 
         comnbo_layermod_left {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <hkey jkey>;
             bindings = <&lm 1 RSHIFT>;
         };
@@ -364,85 +381,99 @@
 
         combo_esc {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <fkey gkey>;
             bindings = <&kp ESC>;
         };
    
         combo_winclose {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <500>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <1200>;
             key-positions = <rkey tkey>;
             bindings = <&kp LC(F4)>;
         };
    
         combo_appclose {
-            timeout-ms = <50>;
-            require-prior-idle-ms = <500>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <1200>;
             key-positions = <vkey bkey>;
             bindings = <&kp LA(F4)>;
         };
         combo_caplock {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <zkey xkey ckey>;
             bindings = <&kp CAPS>;
         };
         combo_capsword {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <ckey bkey>;
             bindings = <&caps_word>;
         };
         combo_del {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <dkey gkey>;
             bindings = <&kp DEL>;
         };
         combo_leftarr {
             timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
             key-positions = <dkey fkey gkey>;
             bindings = <&kp LEFT>;
         };
         combo_rightarr {
             timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
             key-positions = <ekey rkey tkey>;
             bindings = <&kp RIGHT>;
         };
         combo_uparr {
             timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
             key-positions = <wkey ekey rkey>;
             bindings = <&kp UP>;
         };
         combo_dnarr {
             timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
             key-positions = <skey dkey fkey>;
             bindings = <&kp DOWN>;
         };
         combo_pgup {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <fkey jkey>;
             bindings = <&kp PG_UP>;
         };
         combo_pgdn {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <vkey mkey>;
             bindings = <&kp PG_DN>;
         };
         combo_home {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <gkey hkey>;
             bindings = <&kp HOME>;
         };
         combo_end {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <bkey nkey>;
             bindings = <&kp END>;
         };
         combo_teamsmute {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <rkey ukey>;
             bindings = <&kp LS(LC(M))>;
         };
         combo_teamsvidtog {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <tkey ykey>;
             bindings = <&kp LS(LC(O))>;
         };
@@ -450,13 +481,15 @@
 		// Boot key combos
 
         combo_bootleft {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <3000>;
             key-positions = <qkey tkey>;
             bindings = <&bootloader>;
         };
 
         combo_bootright {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <3000>;
             key-positions = <ykey pkey>;
             bindings = <&bootloader>;
         };
@@ -465,16 +498,19 @@
 
         combo_left_click {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <skey fkey>;
             bindings = <&mkp LCLK>;
         };
         combo_right_click {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <wkey rkey>;
             bindings = <&mkp  RCLK>;
         };
         combo_middle_click {
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             key-positions = <ekey tkey>;
             bindings = <&mkp MCLK>;
         }; 
