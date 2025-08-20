@@ -67,7 +67,7 @@
          /* 2.  Tap‑dance wrapper
           *     ─────────────────
           *     - 1×  → delegates to the hold‑tap above
-          *     - 2×  → toggles Layer1
+          *     - 2×  → toggles Layer indicated
           */
          td_shift_layer: tap_dance_1 {
              compatible        = "zmk,behavior-tap-dance";
@@ -224,25 +224,25 @@
         // Characters
       
         combo_doublequ {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             key-positions = <dkey fkey>;
             bindings = <&kp DQT>;
         };
         combo_singlequ {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             key-positions = <jkey kkey>;
             bindings = <&kp SQT>;
         };
         combo_lpar {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             key-positions = <ckey vkey>;
             bindings = <&kp LPAR>;
         };
         combo_rpar {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             key-positions = <mkey commakey>;
             bindings = <&kp RPAR>;
@@ -275,42 +275,42 @@
         // macro combos
 
         combo_chrome {
-            timeout-ms = <15>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey hkey>;
             bindings = <&launch_chrome>;
         };
 
         combo_mycomputer {
-            timeout-ms = <15>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey ykey>;
             bindings = <&mycomputer>;
         };
 
         combo_cpanel {
-            timeout-ms = <15>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey nkey>;
             bindings = <&control_panel>;
         };
 
         combo_vscode {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey ukey>;
             bindings = <&launch_vscode>;
         };
 
         combo_edge {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey jkey>;
             bindings = <&launch_edge>;
         };
         
         combo_notepadpp {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <ckey mkey>;
             bindings = <&launch_notepadpp>;
@@ -320,7 +320,7 @@
         
         combo_alpha {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
             key-positions = <jkey kkey lkey>;
             bindings = <&to 0>;
         };
@@ -332,7 +332,7 @@
         };
         combo_numbsymosl {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
             key-positions = <hkey kkey>;
             bindings = <&sl 1>;
         };
@@ -344,7 +344,7 @@
         };
         combo_funcosl {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
             key-positions = <nkey commakey>;
             bindings = <&sl 2>;
         };
@@ -356,7 +356,7 @@
         };
         combo_apposl {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
             key-positions = <ykey ikey>;
             bindings = <&sl 3>;
         };
@@ -386,14 +386,14 @@
         };
    
         combo_winclose {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <rkey tkey>;
             bindings = <&kp LC(F4)>;
         };
    
         combo_appclose {
-            timeout-ms = <10>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <1200>;
             key-positions = <vkey bkey>;
             bindings = <&kp LA(F4)>;
@@ -497,19 +497,19 @@
 
         combo_left_click {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <25>;
             key-positions = <skey fkey>;
             bindings = <&mkp LCLK>;
         };
         combo_right_click {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <25>;
             key-positions = <wkey rkey>;
             bindings = <&mkp  RCLK>;
         };
         combo_middle_click {
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <25>;
             key-positions = <ekey tkey>;
             bindings = <&mkp MCLK>;
         }; 
