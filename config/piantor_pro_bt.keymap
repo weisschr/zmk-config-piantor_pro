@@ -52,6 +52,11 @@
     continue-list = <BACKSPACE DELETE>;
 };
 
+&mt {
+    tapping-term-ms = <400>;
+    flavor = "tap-preferred";
+};
+
  / {
      behaviors {
          /* 1.  Hold‑tap “MO while held / Sticky‑Shift on tap”  */
